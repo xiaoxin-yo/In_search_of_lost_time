@@ -154,14 +154,14 @@ public class TextManipulation {
 			else{
 				start = findSentenceStart(indexes.get(i))+1;
 				end = findSentenceEnd(indexes.get(i)+1)+1;
-				if (!text.substring(start, end).equals(results.get(results.size()-1))){
+				if (!text.substring(start, end).trim().equals(results.get(results.size()-1).trim())){
 					results.add(text.substring(start, end).trim());
 					//count++;
 				}
 			}
 		}
-		for (String s: results)
-			System.out.println(s + "\n");
+//		for (String s: results)
+//			System.out.println(s + "\n");
 	}
 	
 /*	public String returnDef(){
