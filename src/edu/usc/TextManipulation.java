@@ -22,8 +22,8 @@ public class TextManipulation {
 	
 	public void setAbbv(String abbv) {
 		this.abbv = abbv;
-		// moved to here because we now have abbv set
-		if (countOccur() < 3)
+		// moved to here because we now have abbv set	
+	if (countOccur() < 3)
 			this.results = new String[countOccur()];	
 		else	
 			this.results = new String[3];
@@ -157,9 +157,7 @@ public class TextManipulation {
 					results[count] = text.substring(start, end).trim();
 					count++;
 				}
-				
 			}
-			 
 		}
 		for (String s: results)
 			System.out.println(s + "\n");

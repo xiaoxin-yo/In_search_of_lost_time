@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
@@ -138,7 +139,9 @@ public class Interface {
 					String html1 = "<html><body style='width: ";
 					String html2 = "px'>\n";
 //					System.out.println(s);
-					sentenceLabels[i].setText(html1+"200"+html2+s);
+					String result = html1+"200"+html2+s;
+					result = result.replaceAll(textArea.getSelectedText(), "<b>"+textArea.getSelectedText()+"</b>");
+					sentenceLabels[i].setText(result);
 				}
 				window.pack();
 				window.setVisible(true);
@@ -147,6 +150,16 @@ public class Interface {
 				window.setVisible(false);
 			}
 		}
+//		
+//		private String splitAndBold(String sentence, String abbv) {
+//			ArrayList<Integer> indexes = new ArrayList<Integer>();
+//			int startIndex = 0;
+//			while(sentence.substring(startIndex, sentence.length()).indexOf(abbv)!=-1) {
+//				startIndex = sentence.substring(startIndex, sentence.length()).indexOf(abbv);
+//				indexes.add(startIndex);
+//			}
+//					
+//		}
 	}
 	
 	class MessageWindow extends JWindow{
