@@ -130,6 +130,7 @@ public class Interface {
 		openMenuItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				window.setVisible(false);
 				int returnVal = fileDialog.showOpenDialog(null);
 				if (returnVal == JFileChooser.APPROVE_OPTION) {
 					fileName = fileDialog.getSelectedFile().getAbsolutePath();
